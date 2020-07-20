@@ -5,9 +5,9 @@
 using namespace std;
 namespace phonetic
 {
-    int checker(char c1, char c2)
+    int checker(char c1, char c2) 
     {
-        c1 = tolower(c1);
+        c1 = tolower(c1); // המרה לתו 
         c2 = tolower(c2);
         if(c1 == c2)
         {
@@ -47,12 +47,12 @@ namespace phonetic
             {
                 return 1;
             }
-            return 0;
+            return 0; // לא שווים גם ע"פ התנאים שקיבלנו
         }
     }
     int checker(string w1, string w2)
     {
-        if (w1.size() != w2.size())
+        if (w1.size() != w2.size()) // אם גודלם שונה בהכרח לא שווים
             return 0;
         int i = 0;
         while(w1[i])
@@ -63,7 +63,7 @@ namespace phonetic
         }
         return 1;
     }
-    string find(string text, string word)
+    string find(string text, string word) // האם המילה וורד נמצאת בטקסט
     {
         string temp = "";
         int i = 0;
